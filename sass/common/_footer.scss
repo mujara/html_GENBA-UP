@@ -1,0 +1,153 @@
+@use "../_setting" as s;
+
+#footer {
+	background:#0e0e0e url(../img/common/bgFooter.png) no-repeat center top;
+	clear: both;
+	color:#FFF;
+}
+
+
+#wrapper .footer{
+	text-align:center;
+	&__siteTitle{
+		display:block;
+		padding:0 20% 1em 20%;
+		margin-bottom:0.25em;
+		@include s.media(m){
+			width:20em;
+			margin-left:auto;
+			margin-right:auto;
+			padding:0;
+			margin-bottom:1em;
+		}
+	}
+	&__siteTitle img{
+		width:100%;
+	}
+	&__siteTelBox {
+		display:block;
+		text-align:center;
+		margin-bottom:0.5em;
+		@include s.media(m){
+			margin-bottom:0.1em;
+		}
+		a{
+			color:#FFF;
+			background:#0e4b2d;
+			padding:1em 1.5em 0.5em;
+			display:inline-block;
+			border-radius:0.3em;
+			@include s.media(m){
+				background:none;
+				padding:0.3em 1em;
+				pointer-events:none;
+			}
+		}
+	}
+	&__siteTelSent{
+		font-szie:0.6em;
+		@include s.media(m){
+			display:none;
+		}
+	}
+	&__siteTel {
+		font-size:1.5em;
+		color:#FFF;
+		font-family: 'Fjalla One', sans-serif;
+		display:block;
+		@include s.media(m){
+			font-size:1.8em;
+		}
+	}
+	&__siteFax {
+		font-size:1.5em;
+		color:#FFF;
+		font-family: 'Fjalla One', sans-serif;
+		display:block;
+		text-align:center;
+		margin-bottom:0.5em;
+		pointer-events:none;
+		@include s.media(m){
+			font-size:1.8em;
+			margin-bottom:1em;
+		}
+	}
+	&__sent {
+	font-size:0.8em;
+		@include s.media(m){
+			font-size:0.8em;
+		}
+	}
+	&__sns{
+		display:block;
+		text-align:center;
+		margin-bottom:4em;
+		@include s.media(m){
+			margin-bottom:6em;
+		}
+		li{
+			margin:0 0.25em;
+			display:inline-block;
+			@include s.media(m){
+				margin:0 0.5em;
+			}
+			a{
+				width:3em;
+				height:3em;
+				line-height:3em;
+				background:#FFF;
+				border-radius:50%;
+				display:block;
+				padding-top:0.5em;
+				@include s.media(m){
+					width:4em;
+					height:4em;
+					line-height:4em;
+					padding-top:0.75em;
+				}
+				i{
+					font-size:1.8em;
+					@include s.media(m){
+						font-size:2.5em;
+					}
+				}
+			}
+		}
+	}
+}
+
+
+#wrapper .footer__navi {
+	width:120%;
+	margin-left:-10%;
+	padding:4em 0;
+	border-bottom:#FFF solid 1px;
+	display:block;
+	margin-bottom:4em;
+	text-align:center;
+	@include s.media(m){
+		width:100%;
+		margin-left:0;
+		padding:1.5em 0;
+		margin-bottom:6em;
+	}
+	li{
+		display:block;
+		margin:0.5em 0;
+		@include s.media(m){
+			display:inline-block;
+			margin:0;
+		}
+		a{
+			color:#FFF;
+			text-decoration:none;
+			padding:1em;
+			@include s.media(m){
+				font-size:1.2em;
+			}
+			&:hover {
+				color: s.$colorType02;
+			}
+		}
+	}
+}

@@ -1,0 +1,52 @@
+@use "../_setting" as s;
+
+#header {
+}
+
+.header {
+	&__headBox{
+	    transition: .3s;
+	    background:rgba(255,255,255,.9);
+	    z-index:1;
+		position:absolute;
+		top:0;
+		left:0;
+		width:100%;
+	}
+    &__siteTitleBox {
+		display:block;
+		border-bottom:#999999 solid 1px;
+		@include s.media(m){
+			padding:1em 0 0.5em 0;
+		}
+		dt{
+			width:55%;
+			float:left;
+			padding:1em 1em 1em 0;
+			display:block;
+			@include s.media(m){
+				width:20%;
+				padding:0 0 0 0;
+				vertical-align:middle;
+			}
+			a{
+				@include s.media(m){
+					position:relative;
+				}
+			}
+		}
+		dd{
+			display:none;
+			@include s.media(m){
+				width:80%;
+				float:left;
+				display:block;
+				padding:0 0 0 6em;
+				text-align:right;
+			}
+		}
+		.header__siteTitle img{
+			width:100%;
+		}
+	}
+}

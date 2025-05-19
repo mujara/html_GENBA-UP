@@ -1,0 +1,151 @@
+@use "../_setting" as s;
+
+#mailform  {
+  @include s.media(m){
+    display:block;
+  }
+  input {
+    border:1px solid #ccc;
+    width:95% !important;
+    min-height:30px;
+    display:block;
+    outline: none;
+    vertical-align:middle;
+    background:s.$colorType01;
+    background:#FFF;
+    padding:0.5em;
+
+    -webkit-border-radius:3px;
+    -moz-border-radius:3px;
+    -o-border-radius:3px;
+    -ms-border-radius:3px;
+    border-radius:3px;
+  }
+  input[type=radio] {
+    display:inline;
+    width:1em !important;
+  }
+  input[type=checkbox] {
+    display:inline;
+    width:1em !important;
+  }
+  input[type=submit] {
+    width:auto !important;
+    display:inline-block;
+    padding:0.5em 2em;
+    background:#000;
+    margin:0 0 20px;
+    cursor: pointer;
+    color:#FFF;
+    font-size:1.2em;
+  }
+  input[type=reset] {
+    background:none;
+    padding:0.8rem;
+    background:#F3DCEC;
+    margin:0 0 20px;
+    cursor: pointer;
+  }
+  input[type="file"] {
+    background:none;
+  }
+  textarea{
+    border:1px solid #ccc;
+    width:95% !important;
+    min-height:30px;
+    display:block;
+    margin-bottom:15px;
+    background:s.$colorType01;
+    background:#FFF;
+    margin-top:5px;
+    outline: none;
+
+    -webkit-border-radius:3px;
+    -moz-border-radius:3px;
+    -o-border-radius:3px;
+    -ms-border-radius:3px;
+    border-radius:3px;
+  }
+  select {
+    width: 95% !important;
+  }
+  dl{ 
+    dt{
+      margin:0 0 0.3em;
+      @include s.media(m){
+        width:32%; 
+        float:left; 
+        clear:both;
+        margin:0 0 1.4rem;
+        position:relative;
+      }
+      /*&::before{
+        @include s.media(m){
+          content:"";
+          width:0.8em;
+          height:3px;
+          display:block;
+          background:#000;
+          position:absolute;
+          top:0;
+          left:0;
+        }
+      }*/
+      label{
+        @include s.media(m){
+          padding:0.8rem 20px; 
+          display:block;
+        }
+      }
+    }
+    dd{ 
+      line-height:2em; 
+      padding:0 0 15px; 
+      margin:0 0 0.8rem; 
+      border-bottom:#E8E8E8 solid 1px;
+      display:block; 
+      @include s.media(m){
+        width:65%; 
+        float:left; 
+        padding:0 0.8rem 0.8rem 0.8rem;
+        border-bottom:none;
+      }
+    }
+    &.--lastChild dd{
+      border-bottom:none;
+    }
+  }
+}
+
+.mailformBox{
+  @include s.media(m){
+    width:90%;
+    margin:0 auto 30px;
+    border:#D7D7D7 solid 5px;
+    padding:40px 0 0 20px;
+  }
+}
+
+#mailform dl dt .required{
+  color:#FFF;
+  display:inline-block;
+  font-size:0.7em;
+  background:s.$colorType05;
+  float:right;
+  padding:0.1em 0.5em;
+  border-radius:0.3em;
+  @include s.media(m){
+    font-size:0.8em;
+  }
+}
+
+#mailform .mailform__sentence{
+  display:block;
+  clear:both;
+  background:s.$colorType01;
+  color:s.$colorType02;
+  padding:1.5em;
+  @include s.media(m){
+  	text-align:center;
+  }
+}

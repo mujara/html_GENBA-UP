@@ -1,0 +1,7 @@
+@use "../_setting" as s;
+
+.content{
+	display:block;
+	@include s.media(m){
+	}
+}

@@ -1,0 +1,65 @@
+@use "../_setting" as s;
+
+.content__sentBox{
+	display:block;
+	background:#FFF;
+	padding:2em;
+	margin:6em 0 4em;
+	box-shadow: 0px 0px 15px 0px rgba(0, 0, 0, 0.1);
+	position:relative;
+	@include s.media(m){
+		/*margin:12em 0 4em;*/
+		margin:8em 0 4em;
+		padding:2em 2em 2em 2em;
+	}
+	@include s.media(xl){
+		padding:2em 2em 2em 4em;
+	}
+/*	&::before{
+		width:15em;
+		height:25em;
+		content:" ";
+		display:block;
+		background:url(../img/common/imgAccentParts01.png) no-repeat center top;
+		background-size:100% auto;
+		position:absolute;
+		top:-14.7em;
+		left:50%;
+		margin-left:-6em;
+		@include s.media(m){
+			width:20em;
+			height:35em;
+			position:absolute;
+			top:-19.7em;
+			left:50%;
+			margin-left:-8em;
+		}
+	}
+	&.--typeRequest::before{
+		background:url(../img/common/imgAccentParts02.png) no-repeat center top;
+		background-size:100% auto;
+	} */
+	&__title{
+		font-family: 'Noto Sans JP', sans-serif;
+		font-weight: 700;
+		font-size:1.4em;
+		color:s.$colorType02;
+		color:#000;
+		text-align:center;
+		position:relative;
+		letter-spacing:0.1em;
+		display:block;
+		margin-top:2em;
+		margin-bottom:2em;
+		img{
+			width:1.5em;
+		}
+		@include s.media(m){
+			margin-bottom:2em;
+			font-size:2em;
+		}
+		@include s.media(xl){
+			font-size:2.2em;
+		}
+	}
+}
